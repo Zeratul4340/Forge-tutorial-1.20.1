@@ -26,13 +26,11 @@ public class TutorialMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        // Register the commonSetup method for modloading
+
         modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
