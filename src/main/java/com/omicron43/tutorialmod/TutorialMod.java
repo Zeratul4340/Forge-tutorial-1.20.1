@@ -1,6 +1,7 @@
 package com.omicron43.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import com.omicron43.tutorialmod.block.ModBlocks;
 import com.omicron43.tutorialmod.item.ModCreativeModeTabs;
 import com.omicron43.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class TutorialMod
         ModCreativeModeTabs.register(modEventBus);
         //ensures defferred register is registered and properly adds items
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

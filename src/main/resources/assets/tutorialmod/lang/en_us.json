@@ -2,5 +2,8 @@
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.raw_sapphire": "TS RAW",
 
+  "block.tutorialmod.sapphire_block": "Cubic Meter of Sapphire",
+  "block.tutorialmod.raw_sapphire_block": "Cubic Meter of RAW Sapphire",
+
   "creativetab.tutorial_tab": "Creative Tab Trial"
 }
