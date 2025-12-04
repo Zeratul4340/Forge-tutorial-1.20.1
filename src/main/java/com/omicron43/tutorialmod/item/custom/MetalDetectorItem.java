@@ -1,5 +1,6 @@
 package com.omicron43.tutorialmod.item.custom;
 
+import com.omicron43.tutorialmod.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -40,7 +41,7 @@ public class MetalDetectorItem extends Item {
             }
 
             if(!foundBlock) {
-                player.sendSystemMessage(Component.literal("Nothing metallic found..."));
+                player.sendSystemMessage(Component.literal("Nothing found..."));
             }
         }
 
@@ -61,6 +62,6 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.COPPER_ORE) || state.is(Blocks.GOLD_ORE);
+        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }
