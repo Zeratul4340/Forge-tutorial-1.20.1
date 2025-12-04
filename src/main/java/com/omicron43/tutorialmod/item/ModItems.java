@@ -1,6 +1,7 @@
 package com.omicron43.tutorialmod.item;
 
 import com.omicron43.tutorialmod.TutorialMod;
+import com.omicron43.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +18,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+    //declare custom items with their respective class
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(2048)));
 
     //need to register the registrar itself
     public static void register(IEventBus eventBus) {
